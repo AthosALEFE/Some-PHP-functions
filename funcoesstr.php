@@ -2,58 +2,58 @@
 <html>
 <head>
   <link rel="stylesheet" href="_css/estilo.css"/>
-  <meta charset="UTF-8"/>
+  <meta charset="windows-1252"/>
   <title>Some functions PHP</title>
 </head>
 <body>
 <div>
     <?php
         $wordSet = isset($_GET["data"])?$_GET["data"]:"Athos";
-        /* A partir de agora estão listadas algumas funções para tratamento de string 
+        /* A partir de agora estÃ£o listadas algumas funÃ§Ãµes para tratamento de string 
          * com objetivo de aprendizado
          * por Athos Alefe
          */
-        //strlen = conta as posições;
+        //strlen = conta as posiÃ§Ãµes;
         echo "<p>".strlen($wordSet)."</p>";
         
-        //strtoupper = passa pra maiúsculo;
+        //strtoupper = passa pra maiÃºsculo;
         echo "<p>".strtoupper($wordSet)."</p>";
         
-        //strtolower = passa pra minúsculo;
+        //strtolower = passa pra minÃºsculo;
         echo "<p>".strtolower($wordSet)."</p>";
         
-        //strpos = procura a posição de uma substr
+        //strpos = procura a posiÃ§Ã£o de uma substr
         echo "<p>".strpos($wordSet,"A")."</p>";
         
-        //stripos = strpos porém ignora caracteres maiúsculos e minúsculos
+        //stripos = strpos porÃ©m ignora caracteres maiÃºsculos e minÃºsculos
         echo "<p>".stripos($wordSet,"a")."</p>";
         
         //substr = captura uma substr
         echo "<p>".substr($wordSet,-5)."</p>";
         
-         /*wordwrap = quebra linhas no código e no out. 
-         * 1 = variável; 
-         * 2 = posição; 
-         * 3 = elemento de repetição(com \n quebra o código); 
-         * 4 = false > mantem palavras :  true > não mantem palavras        
+         /*wordwrap = quebra linhas no cÃ³digo e no out. 
+         * 1 = variÃ¡vel; 
+         * 2 = posiÃ§Ã£o; 
+         * 3 = elemento de repetiÃ§Ã£o(com \n quebra o cÃ³digo); 
+         * 4 = false > mantem palavras :  true > nÃ£o mantem palavras        
          */
         echo "<p>".wordwrap($wordSet,5,"<br/>\n",false)."</p>";
         
-        //trim = corta espaços
+        //trim = corta espaÃ§os
         echo "<p>".trim($wordSet)."</p>";
         
-        //ltrim = corta espaços só do inicio
+        //ltrim = corta espaÃ§os sÃ³ do inicio
         echo "<p>".ltrim($wordSet)."</p>";
         
-        //rtrim = corta espaços só do final
+        //rtrim = corta espaÃ§os sÃ³ do final
         echo "<p>".rtrim($wordSet)."</p>";
         
-        /* str_word_count = mostra o número de palavras em uma frase
-         * 1 = variável
-         * 2 = parâmetros 
-         * (0 > mostra apenas o número de palavras)
+        /* str_word_count = mostra o nÃºmero de palavras em uma frase
+         * 1 = variÃ¡vel
+         * 2 = parÃ¢metros 
+         * (0 > mostra apenas o nÃºmero de palavras)
          * (1 > aloca as palavras em um array)
-         * (2 > aloca as palavras em um array colocando como índice a posição de início das palavras)
+         * (2 > aloca as palavras em um array colocando como Ã­ndice a posiÃ§Ã£o de inÃ­cio das palavras)
          */
         $example = str_word_count($wordSet,0);
         echo "<p>".$example."</p>";
@@ -62,10 +62,10 @@
         $example1 = str_split($wordSet);
         var_dump($example1); 
         
-        //ucfirst = ucword = coloca as primeiras letras de cada palavra da str em maiúsculo
+        //ucfirst = ucword = coloca as primeiras letras de cada palavra da str em maiÃºsculo
         echo "<p>".ucwords($wordSet)."</p>";
         
-        //strrev = coloca a string ao contrário        
+        //strrev = coloca a string ao contrÃ¡rio        
         echo "<p>".strrev($wordSet)."</p>";
         
         //substr_count = conta quantas vezes uma substr aparece
@@ -80,11 +80,11 @@
         //str_replace = troca algum elemento da string por outro 
         echo "<p>".str_replace("a","b",$wordSet)."</p>";
         
-        //str_ireplace = faz o mesmo que str_replace porém ignorando a capitalização das letras
+        //str_ireplace = faz o mesmo que str_replace porÃ©m ignorando a capitalizaÃ§Ã£o das letras
         
-        /* strpad = fomata um string para caber dentro que um espaço pré-definido
-         * 1 = variável
-         * 2 = número de posições
+        /* strpad = fomata um string para caber dentro que um espaÃ§o prÃ©-definido
+         * 1 = variÃ¡vel
+         * 2 = nÃºmero de posiÃ§Ãµes
          * 3 = "preechimento"
          * 4 = posiciona a string (str_pad_right , str_pad_left , str_pad_both )
          */
